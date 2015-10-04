@@ -12,12 +12,14 @@ public class client{
         int no = in.nextInt();
         tweetquery tweets = new tweetquery();
         tweets.setup(no,topic);
-        tweets.display();
-        
-       /* NLP.init();
-        for(String tweet : tweets) {
+        //tweets.display();
+        System.out.println("Entry Point 0");
+        NLP.init();
+        for(String tweet : tweets.comm)
+        {
+            System.out.println("Entry Point 1");
             System.out.println(tweet + " : " + NLP.findSentiment(tweet));
-        }*/
+        }
         
      }
 }
