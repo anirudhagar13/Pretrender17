@@ -14,3 +14,6 @@ hs_err_pid*
 /twitter_fetchdata/build/
 /tweet_fetcher/nbproject/private/
 /tweet_fetcher/build/
+/tweet_fetcher/dist/
+/analyse/nbproject/private/
+/analyse/build/
