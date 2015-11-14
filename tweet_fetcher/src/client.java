@@ -26,12 +26,11 @@ public class client {
                 show(tweets.comm);
                 break;
             default:
-                System.out.println("Entry point 3");
                 System.out.println("INVALID INPUT !!!\n");
                 break;
         }
-        //prof.display();
-        //tweets.display();    
+        System.out.println("Enter DATE for Prediction");
+        String date = in.next();   
     }
 
     public static void show(LinkedHashSet<String> comm) throws IOException {
