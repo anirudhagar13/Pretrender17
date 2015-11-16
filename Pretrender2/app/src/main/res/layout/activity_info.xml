@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/scrollView"
+    android:background="@drawable/blur1">
+
+
+    <Button
+            android:id="@+id/BT1"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:layout_weight="0.54"
+            android:background="#02c7dcff"
+        style="@android:style/Holo.Light.ButtonBar"
+        android:textColor="#ff3136ff"
+        android:textColorHighlight="#ffadcdff"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <AutoCompleteTextView
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:hint="Entity"
+        android:longClickable="false"
+        android:autoText="true"
+        android:layout_weight="0.45"
+        android:clickable="false"
+        android:capitalize="words"
+        android:id="@+id/TB1"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:textColorHint="#ffadcdff"
+        android:layout_marginTop="63dp"
+        android:shadowColor="#ff7378ff"
+        android:textColor="#ff767aff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="Enter Your Wish !!"
+        android:id="@+id/textView"
+        android:textColor="#e7ba706a"
+        android:textSize="25dp"
+        android:textStyle="bold|italic"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:width="20dp" />
+
+</RelativeLayout>

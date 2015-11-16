@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.app.code.pretrender.lol"
+    android:background="@drawable/blur3">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="PREDICT"
+        android:id="@+id/BT2"
+        android:background="#0597d3ff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ff3eb9ff"
+        android:textSize="25dp"
+        android:textStyle="bold|italic"/>
+
+    <DatePicker
+        android:id="@+id/DP"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Animation.Toast"
+        android:calendarViewShown="true"
+        android:focusable="true"
+        android:layout_weight="0.45"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:spinnersShown="true"
+        android:visibility="visible"
+        android:focusableInTouchMode="true" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PB"
+        android:layout_marginBottom="34dp"
+        android:layout_above="@+id/BT2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:progress="4"
+        android:focusableInTouchMode="false"
+        android:focusable="true" />
+
+</RelativeLayout>

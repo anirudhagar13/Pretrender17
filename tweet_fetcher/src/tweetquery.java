@@ -31,7 +31,7 @@ public class tweetquery {
             try {
                 QueryResult result = twitter.search(query);
                 tweets.addAll(result.getTweets());
-                System.out.println("Gathered " + tweets.size() + " tweets");
+                System.out.println("Gathered " + tweets.size()+"0" + " tweets");
 
                 for (Status t : tweets) {
                     if (t.getId() < lastID) {

@@ -2,29 +2,36 @@
 import java.util.*;
 import java.io.*;
 
-public class client {
+public class run {
+    String topic;
+    
+    public run(String topic)
+    {
+        this.topic = topic;
+    }
 
-    public static void main(String[] args) throws IOException {
+    public float[] extreme() throws IOException {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter Choice(+)\n[1] Timeline Tweets\n[2] HashTag Tweets\n");
         int choice = in.nextInt();
-        String topic;
+        float []fin = new float[30];
+        
         switch (choice) {
             case 1:
-                System.out.println("Enter Exact Twitter Handle !!");
-                topic = in.next();
+                /*System.out.println("Enter Exact Twitter Handle !!");
+                topic = in.next();*/
                 timeline prof = new timeline();
                 prof.setup(topic);
                 show(prof.writt);
                 break;
             case 2:
-                System.out.println("Enter Topic & Number of Tweets !!");
-                topic = in.next();
-                int no = in.nextInt();
+                /*System.out.println("Enter Topic & Number of Tweets !!");
+                topic = in.next();*/
+                int no = 500;
                 tweetquery tweets = new tweetquery();
                 tweets.setup(no, topic);
                 float arr[] = show(tweets.comm);
-                float []fin = compute(arr);
+                fin = compute(arr);
                 for(int l = 0 ;l < 30;++l)
                 {
                     System.out.println("Sentiment +> "+fin[l]);
@@ -35,8 +42,9 @@ public class client {
                 break;
 
         }
+        return fin;
     }
-    public static float[] compute(float[]arr) throws IOException {
+    public  float[] compute(float[]arr) throws IOException {
         float[] lol = new float[30];
         float acc = 0,count = 0;
         int temp = 0;
@@ -71,7 +79,7 @@ public class client {
         
     }
 
-    public static float[] show(LinkedHashSet<String> comm) throws IOException {
+    public  float[] show(LinkedHashSet<String> comm) throws IOException {
         NLP.init();
         File f = new File("C:\\Users\\ABC\\Desktop\\Tweets.txt");
         FileWriter fol = new FileWriter(f);
