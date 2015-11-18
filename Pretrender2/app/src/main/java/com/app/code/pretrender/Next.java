@@ -1,10 +1,13 @@
 package com.app.code.pretrender;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class Next extends ActionBarActivity {
@@ -13,30 +16,47 @@ public class Next extends ActionBarActivity {
     String score;
     TextView sc;
     TextView pred;
-    float actual;
+    Float actual;
+    ImageView img;
+    String uri;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_next);
-        //damnit = getIntent().getExtras();
-        //score = damnit.getString("take");
-        actual = (float)0.5;
+
+        img = (ImageView)findViewById(R.id.IMG);
+        damnit = getIntent().getExtras();
+        score = damnit.getString("give");
+        actual = Float.parseFloat(score);
         sc = (TextView)findViewById(R.id.TV4);
         pred = (TextView)findViewById(R.id.TV5);
-        sc.setText("0.5");
+        sc.setText(score);
+        Toast.makeText(getApplicationContext(), "This Is the Result =" + score, Toast.LENGTH_LONG).show();
 
-        if(actual > 2.5)
+
+
+        if(actual > 2.5){
             pred.setText("The Future Is BRIGHT :P");
-        else if(actual < 2.5 && actual > 2.0)
+            uri = "@drawable/vgood";}
+        else if(actual < 2.5 && actual > 2.0){
             pred.setText("The Future is GOOD :)");
-        else if(actual < 2.0 && actual > 1.5)
+            uri = "@drawable/good";}
+        else if(actual < 2.0 && actual > 1.5){
             pred.setText("The Future is OK :|");
-        else if(actual < 1.5 && actual > 1.0)
+            uri = "@drawable/ok";}
+        else if(actual < 1.5 && actual > 1.0){
             pred.setText("The Future is DULL :(");
-        else
+            uri = "@drawable/bad";}
+        else{
             pred.setText("The Future is DARK ??");
+            uri = "@drawable/vbad";}
+
+        int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+        Drawable res = getResources().getDrawable(imageResource);
+        img.setImageDrawable(res);
     }
 
 }

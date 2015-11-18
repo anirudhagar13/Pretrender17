@@ -5,9 +5,9 @@ import java.io.*;
 public class run {
     String topic;
     
-    public run(String topic)
+    public run(String receive)
     {
-        this.topic = topic;
+        topic = receive.split("~",2)[0];         
     }
 
     public float[] extreme() throws IOException {
@@ -27,13 +27,20 @@ public class run {
             case 2:
                 /*System.out.println("Enter Topic & Number of Tweets !!");
                 topic = in.next();*/
-                int no = 500;
+                int no = 100;
                 tweetquery tweets = new tweetquery();
                 tweets.setup(no, topic);
-                float arr[] = show(tweets.comm);
+                float arr[] = show(tweets.comm);             
+                //*******************Prediction data*******************
+                File f3 = new File("C:\\Users\\ABC\\Desktop\\Predict.txt");
+                FileWriter fl = new FileWriter(f3);
+                for(int j = 0 ; j < arr.length ; ++j)
+                    fl.write("Sentiment +"+arr[j]);
+                //*******************Prediction data*******************
                 fin = compute(arr);
+                System.out.println("Constricted Version of Sentiment Calculation :+");
                 for(int l = 0 ;l < 30;++l)
-                {
+                {                   
                     System.out.println("Sentiment +> "+fin[l]);
                 }
                 break;
@@ -74,7 +81,7 @@ public class run {
             ++count;
         }
         lol[29] = acc/count;
-        System.out.println("LAST VALUE + "+lol[29]);
+        //System.out.println("LAST VALUE + "+lol[29]);
         return lol;
         
     }

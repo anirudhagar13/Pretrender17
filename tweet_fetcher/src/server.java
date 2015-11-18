@@ -5,18 +5,21 @@ import java.net.*;
 class server {
 
     public static void main(String args[]) throws Exception {
-        DatagramSocket serverSocket = new DatagramSocket(9896);
+        DatagramSocket serverSocket = new DatagramSocket(9891);
         byte[] receiveData = new byte[1024];
         byte[] sendData = new byte[1024];
+        String receive,date;
         while (true) {
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
             serverSocket.receive(receivePacket);
-            String topic = new String(receivePacket.getData());
-            System.out.println("RECEIVED: " + topic);
+            receive = new String(receivePacket.getData());
+            System.out.println("RECEIVED: " + receive);
             InetAddress IPAddress = receivePacket.getAddress();
             int port = receivePacket.getPort();
+            date = receive.split("~",2)[1]; 
             //*********************COMPUTATION*****************************
-            run obj = new run(topic);
+            run obj = new run(receive);
+            //Constricted Version
             float[]fin = obj.extreme();
             //double dig[] = new double[30];
             //double lol[] = new double[30];
@@ -42,6 +45,7 @@ class server {
             sendData = damn.getBytes();
             DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
             serverSocket.send(sendPacket);
+            return;
         }
     }
 }

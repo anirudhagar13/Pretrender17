@@ -47,6 +47,7 @@
         android:layout_marginStart="45dp"
         android:progress="4"
         android:focusableInTouchMode="false"
-        android:focusable="true" />
+        android:focusable="true"
+        android:visibility="invisible" />
 
 </RelativeLayout>
