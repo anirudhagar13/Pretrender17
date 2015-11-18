@@ -35,7 +35,8 @@ public class run {
                 File f3 = new File("C:\\Users\\ABC\\Desktop\\Predict.txt");
                 FileWriter fl = new FileWriter(f3);
                 for(int j = 0 ; j < arr.length ; ++j)
-                    fl.write("Sentiment +"+arr[j]);
+                    fl.write("\n"+arr[j]);
+                fl.close();
                 //*******************Prediction data*******************
                 fin = compute(arr);
                 System.out.println("Constricted Version of Sentiment Calculation :+");

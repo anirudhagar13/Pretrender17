@@ -27,6 +27,7 @@ public class Next extends ActionBarActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_next);
 
+        Toast.makeText(getApplicationContext(), "PredicTion Made !!", Toast.LENGTH_LONG).show();
         img = (ImageView)findViewById(R.id.IMG);
         damnit = getIntent().getExtras();
         score = damnit.getString("give");
@@ -34,9 +35,6 @@ public class Next extends ActionBarActivity {
         sc = (TextView)findViewById(R.id.TV4);
         pred = (TextView)findViewById(R.id.TV5);
         sc.setText(score);
-        Toast.makeText(getApplicationContext(), "This Is the Result =" + score, Toast.LENGTH_LONG).show();
-
-
 
         if(actual > 2.5){
             pred.setText("The Future Is BRIGHT :P");

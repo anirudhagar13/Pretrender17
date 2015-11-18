@@ -2,6 +2,7 @@ package com.app.code.pretrender;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,30 +39,16 @@ public class lol extends ActionBarActivity {
         topic = damn.getString("take");
         dp = (DatePicker) findViewById(R.id.DP);
         btn = (Button) findViewById(R.id.BT2);
+        spin = (ProgressBar) findViewById(R.id.PB);
+        spin.setVisibility(View.GONE);
 
      btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                spin.setVisibility(View.VISIBLE);
                 dat = ""+dp.getDayOfMonth()+"/"+""+dp.getMonth()+"/"+""+dp.getYear();
-                spin = (ProgressBar) findViewById(R.id.PB);
-                spin.setVisibility(View.INVISIBLE);
-                /*******************************TCP************************************************
-                try{
-                    //BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
-                    Toast.makeText(getApplicationContext(),"Step 1", Toast.LENGTH_LONG).show();
-                    Socket clientSocket = new Socket("192.168.43.22", 6789);
-                    Toast.makeText(getApplicationContext(),"Step 2", Toast.LENGTH_LONG).show();
-                    DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
-                    Toast.makeText(getApplicationContext(),"Step 3", Toast.LENGTH_LONG).show();
-                    //BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                    //String sentence = inFromUser.readLine();
-                    Toast.makeText(getApplicationContext(),"Crucial", Toast.LENGTH_LONG).show();
-                    outToServer.writeBytes(dat + '\n');
-                    Toast.makeText(getApplicationContext(),"Done", Toast.LENGTH_LONG).show();
-                    //String modifiedSentence = inFromServer.readLine();
-                    //System.out.println("FROM SERVER: " + modifiedSentence);
-                    clientSocket.close();}catch(Exception e){Toast.makeText(getApplicationContext(),"Nothing", Toast.LENGTH_LONG).show();}
-                //*******************************TCP************************************************/
+                new experiment().execute(topic+"~"+dat);
+                /**************************************WORKS****************************************
                 //*******************************UDP************************************************
                 new Thread(new Runnable() {
                     @Override
@@ -84,29 +71,58 @@ public class lol extends ActionBarActivity {
                             android.util.Log.e("err","",e);}
                     }
                 }
-
                 ).start();
-                //**************************************UDP*******************************/
-                Toast.makeText(getApplicationContext(),""+dat, Toast.LENGTH_LONG).show();
-               /* new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        //Toast.makeText(getApplicationContext(),"New Spinner Thread", Toast.LENGTH_LONG).show();
-                        spin.setVisibility(View.VISIBLE);
-                    }
-                }).start();*/
-                while(score == "")
-                {
+                //**************************************UDP*******************************
 
-                    //Toast.makeText(getApplicationContext(),"New Spinner Thread", Toast.LENGTH_LONG).show();
-                    //spin.setVisibility(View.VISIBLE);
-                }
-               // spin.setVisibility(View.VISIBLE);
+                Toast.makeText(getApplicationContext(),""+dat, Toast.LENGTH_LONG).show();
+                while(score == "")
+                {/***To TRAP UI THREAD***}
+
                 Intent next = new Intent(lol.this, Next.class);
                 Toast.makeText(getApplicationContext(),score, Toast.LENGTH_LONG).show();
                 next.putExtra("give", score);
                 startActivity(next);
+                 ***************************************WORKS****************************************/
             }
         });
         }
+
+    private class experiment extends AsyncTask<String,Void,String>
+    {
+        @Override
+        protected void onPreExecute()
+        {
+            super.onPreExecute();
+        }
+        @Override
+        protected String doInBackground(String... uri)
+        {
+            try{
+                DatagramSocket clientSocket = new DatagramSocket();
+                InetAddress IPAddress = InetAddress.getByName("192.168.43.22");
+                byte[] sendData = new byte[1024];
+                byte[] receiveData = new byte[1024];
+                sendData = (topic+"~"+dat).getBytes();
+                DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 9891);
+                clientSocket.send(sendPacket);
+                DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+                clientSocket.receive(receivePacket);
+                score = new String(receivePacket.getData());
+            }catch(Exception e)
+            {Toast.makeText(getApplicationContext(),"Not Able To Send", Toast.LENGTH_LONG).show();
+                android.util.Log.e("err","",e);}
+            return "Chodu";
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            super.onPostExecute(result);
+            Intent next = new Intent(lol.this, Next.class);
+            next.putExtra("give", score);
+            startActivity(next);
+        }
+
+    }
+
+
 }

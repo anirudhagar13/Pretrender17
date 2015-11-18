@@ -36,18 +36,11 @@
         android:focusableInTouchMode="true" />
 
     <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/PB"
-        android:layout_marginBottom="34dp"
         android:layout_above="@+id/BT2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="45dp"
-        android:layout_marginStart="45dp"
-        android:progress="4"
-        android:focusableInTouchMode="false"
-        android:focusable="true"
-        android:visibility="invisible" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
