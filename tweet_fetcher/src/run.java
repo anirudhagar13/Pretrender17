@@ -27,7 +27,7 @@ public class run {
             case 2:
                 /*System.out.println("Enter Topic & Number of Tweets !!");
                 topic = in.next();*/
-                int no = 100;
+                int no = 1000;
                 tweetquery tweets = new tweetquery();
                 tweets.setup(no, topic);
                 float arr[] = show(tweets.comm);             
