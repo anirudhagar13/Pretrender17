@@ -17,8 +17,8 @@ public class tweetquery {
         Twitter twitter = new TwitterFactory().getInstance();
         Query query = new Query(topic);
         //Adding Date
-        query.setSince("2015-09-29");
-        query.setUntil("2015-11-18");
+        query.setSince("2015-11-11");
+        
         long lastID = Long.MAX_VALUE;
 
         ArrayList<Status> tweets = new ArrayList<Status>();

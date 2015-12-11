@@ -99,7 +99,7 @@ public class lol extends ActionBarActivity {
         {
             try{
                 DatagramSocket clientSocket = new DatagramSocket();
-                InetAddress IPAddress = InetAddress.getByName("192.168.43.22");
+                InetAddress IPAddress = InetAddress.getByName("192.168.1.3");
                 byte[] sendData = new byte[1024];
                 byte[] receiveData = new byte[1024];
                 sendData = (topic+"~"+dat).getBytes();
@@ -109,7 +109,7 @@ public class lol extends ActionBarActivity {
                 clientSocket.receive(receivePacket);
                 score = new String(receivePacket.getData());
             }catch(Exception e)
-            {Toast.makeText(getApplicationContext(),"Not Able To Send", Toast.LENGTH_LONG).show();
+            {Toast.makeText(getApplicationContext(),"Please Check Your Data Connection!", Toast.LENGTH_LONG).show();
                 android.util.Log.e("err","",e);}
             return "Chodu";
         }

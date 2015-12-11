@@ -6,6 +6,10 @@ class server {
 
     public static void main(String args[]) throws Exception {
         DatagramSocket serverSocket = new DatagramSocket(9891);
+        
+        File f3 = new File("C:\\Users\\ABC\\Desktop\\PreTrender\\ConnectLog.txt");
+        FileWriter f1 = new FileWriter(f3);
+        
         byte[] receiveData = new byte[1024];
         byte[] sendData = new byte[1024];
         String receive,date;
@@ -13,39 +17,28 @@ class server {
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
             serverSocket.receive(receivePacket);
             receive = new String(receivePacket.getData());
-            System.out.println("RECEIVED: " + receive);
+                  
+           //LOG FILE Creation 
+            System.out.println("\n****************CLIENT DETAILS*********************\n");
+            System.out.print(receivePacket.getAddress().toString()+"\n");
+            System.out.print(receive+"\n");
+            System.out.print(receivePacket.getLength()+"\n");
+            System.out.println("\n***************************************************\n");
+            //f1.close();
+            
             InetAddress IPAddress = receivePacket.getAddress();
-            int port = receivePacket.getPort();
-            date = receive.split("~",2)[1]; 
+            int port = receivePacket.getPort();            
             //*********************COMPUTATION*****************************
             run obj = new run(receive);
-            //Constricted Version
-            float[]fin = obj.extreme();
-            //double dig[] = new double[30];
-            //double lol[] = new double[30];
-            float sum = 0;
-            for(int i = 0 ; i < 30 ; ++i)
-            {
-                //dig[i] = i+1;
-                //lol[i] = fin[i];
-               sum += fin[i]; 
-            }
-            //double senti = predict.get_out(dig,lol,32);
-            //System.out.println("NAVNEET + "+senti);
-            float senti = sum / 30;
-            String damn = ""+senti;   
-           /* String damn = "";
-            for(int i = 0 ; i < fin.length ; ++i)
-            {
-                damn += "\n"+""+fin[i];
-            }*/
-            //*************************************************************
-          // String capitalizedSentence = "RECEIVED SENTIMENT + 3.0";
-            //sendData = capitalizedSentence.getBytes();
+            float fin = obj.extreme();
+            String damn = ""+fin;  
+            
             sendData = damn.getBytes();
             DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
             serverSocket.send(sendPacket);
-            return;
-        }
+            
+             return;
+            
+        } 
     }
 }

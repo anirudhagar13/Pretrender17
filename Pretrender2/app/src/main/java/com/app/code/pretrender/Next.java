@@ -39,13 +39,13 @@ public class Next extends ActionBarActivity {
         if(actual > 2.5){
             pred.setText("The Future Is BRIGHT :P");
             uri = "@drawable/vgood";}
-        else if(actual < 2.5 && actual > 2.0){
+        else if(actual <= 2.5 && actual > 2.0){
             pred.setText("The Future is GOOD :)");
             uri = "@drawable/good";}
-        else if(actual < 2.0 && actual > 1.5){
+        else if(actual <= 2.0 && actual > 1.5){
             pred.setText("The Future is OK :|");
             uri = "@drawable/ok";}
-        else if(actual < 1.5 && actual > 1.0){
+        else if(actual <= 1.5 && actual > 1.0){
             pred.setText("The Future is DULL :(");
             uri = "@drawable/bad";}
         else{
