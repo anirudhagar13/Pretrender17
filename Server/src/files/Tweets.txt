@@ -1,0 +1,121 @@
+*****************************TWEET:0*****************************
+Please provide an alternative for my dad's missed flight due to 3 hrs delay of train 09005. :=> 1.0(Sentiment)
+*************************************************************************
+*****************************TWEET:1*****************************
+Please arrange for alternative commute for the missed flight due to the delay of 3 hrs of train 09005. :=> 1.0(Sentiment)
+*************************************************************************
+*****************************TWEET:2*****************************
+My Dad missed his flight because train 09005 from Mumbai to Delhi was delayed by 3 hrs. Pls consider. :=> 1.13(Sentiment)
+*************************************************************************
+*****************************TWEET:3*****************************
+Download a Bear! Browse like you're in another country! https://t.co/lkEPe9H2Z3 :=> 2.0(Sentiment)
+*************************************************************************
+*****************************TWEET:4*****************************
+.I was planning on slamming the Communist Manifesto on your face, but now I wont. #sudhanvacomeback :=> 1.1836735(Sentiment)
+*************************************************************************
+*****************************TWEET:5*****************************
+ My whole twitter life revolves around you in a bollywood movie i'd be your bahu. such anti feminism, muc… :=> 1.4615384(Sentiment)
+*************************************************************************
+*****************************TWEET:6*****************************
+.If Bernie wins, and given that he is a socialist, screw capitalism. For such political insights #sudhanvacomeback :=> 2.5929203(Sentiment)
+*************************************************************************
+*****************************TWEET:7*****************************
+.You help design awesome batches #sudhanvacomeback  :=> 2.0(Sentiment)
+*************************************************************************
+*****************************TWEET:8*****************************
+ .
+Too much time away
+Newspapers unread, poems not written
+You know it missed you 
+We miss you too
+Please… :=> 1.0096154(Sentiment)
+*************************************************************************
+*****************************TWEET:9*****************************
+.How I envy you for this? Let's have a poetry battle. But. #sudhanvacomeback  :=> 2.0(Sentiment)
+*************************************************************************
+*****************************TWEET:10*****************************
+ Remember the rain people? here's my poem with your favourite part , where is yours? #SudhanvaSDS… :=> 1.4(Sentiment)
+*************************************************************************
+*****************************TWEET:11*****************************
+.POETRY SLAM! #sudhanvacomeback  :=> 2.4(Sentiment)
+*************************************************************************
+*****************************TWEET:12*****************************
+ Cn u evn stnd reading twts lyk dis? .#SudhanvaComeBack :=> 1.3396226(Sentiment)
+*************************************************************************
+*****************************TWEET:13*****************************
+ #SudhanvaComeBack :=> 2.0(Sentiment)
+*************************************************************************
+*****************************TWEET:14*****************************
+.People have gifts for your birthday. Your mom has gifts for you. #sudhanvacomeback  :=> 2.3333333(Sentiment)
+*************************************************************************
+*****************************TWEET:15*****************************
+ Sudhanva you are 21 today! Time for your first "official" drink, where are you! #SudhanvaComeBack :=> 2.8210526(Sentiment)
+*************************************************************************
+*****************************TWEET:16*****************************
+ Sudhanva does Twitter remind you of precis writing in ICSE. this is TOUGH, help me out here #SudhanvaComeBack :=> 1.0(Sentiment)
+*************************************************************************
+*****************************TWEET:17*****************************
+ Saw an old email of yours, "Plesures" of writing. Not expected tch tch. Must discuss #SudhanvaComeBack… :=> 1.3069307(Sentiment)
+*************************************************************************
+*****************************TWEET:18*****************************
+.Your roommate misses your bad jokes. #sudhanvacomeback :=> 1.3333334(Sentiment)
+*************************************************************************
+*****************************TWEET:19*****************************
+ Can't even figure out Twitter, can you come back and help me with this?! #SudhanvaComeBack :=> 2.8089888(Sentiment)
+*************************************************************************
+*****************************TWEET:20*****************************
+.It is your birthday man, you are growing up. Be your Mom's proud traveller. Dont run away.  #sudhanvacomeback :=> 2.5660377(Sentiment)
+*************************************************************************
+*****************************TWEET:21*****************************
+ Survey in PES campus shows that 100% students want you back home #SudhanvaComeBack :=> 1.0(Sentiment)
+*************************************************************************
+*****************************TWEET:22*****************************
+ .Future EIC of XYZ media house, there's a bright future awaiting you.
+#sudhanvacomeback :=> 2.7906976(Sentiment)
+*************************************************************************
+*****************************TWEET:23*****************************
+.If u are reading this, we just want to tell u that ur mom is admitted in the hospital and she needs u now. #sudhanvacomeback :=> 1.1451613(Sentiment)
+*************************************************************************
+*****************************TWEET:24*****************************
+ If you are reading this,your mother has gone into depression and is going to be admitted to hospital. We nee… :=> 1.0648148(Sentiment)
+*************************************************************************
+*****************************TWEET:25*****************************
+#RajnigandhaSixWordsStory
+So, atheist huh? How is Satan? :=> 1.2363636(Sentiment)
+*************************************************************************
+*****************************TWEET:26*****************************
+Fighting for peace, oh the irony! 
+#RajnigandhaSixWordsStory :=> 2.5689654(Sentiment)
+*************************************************************************
+*****************************TWEET:27*****************************
+ Over 150 #IslamicState ‘supporters’ in South India  :=> 1.0(Sentiment)
+*************************************************************************
+*****************************TWEET:28*****************************
+"Dear delegate of Hungry"
+Delegate of Brazil is clearly Hung(a)ry. #IIMMUN2015 #UNGC :=> 1.2048193(Sentiment)
+*************************************************************************
+*****************************TWEET:29*****************************
+A delegate just asked the delegate of China, "Hey China, who is the delegate of PRC?"....?
+And yes,no further info. #IIMBMUN2015 #UNGC :=> 1.7686567(Sentiment)
+*************************************************************************
+*****************************TWEET:30*****************************
+ My #MphasisIntern #entry on #IoT is on Please retweet and favorite and help me win the #Internship :=> 3.0(Sentiment)
+*************************************************************************
+*****************************TWEET:31*****************************
+ #TBT When Nike paid Jordan's fines. Waiting for Apple to pay the fines of NFL players wearing Beats Headphones. :=> 1.3181819(Sentiment)
+*************************************************************************
+*****************************TWEET:32*****************************
+ #flipkart :=> 2.0(Sentiment)
+*************************************************************************
+*****************************TWEET:33*****************************
+I cannot decide which team to support. Messi or Germany!! #GERvsARG :=> 1.4153847(Sentiment)
+*************************************************************************
+*****************************TWEET:34*****************************
+#BRAvsGER Oktoberfest in July!! :=> 2.0(Sentiment)
+*************************************************************************
+*****************************TWEET:35*****************************
+ Belgians have kicked Messi more times than the ball so far....#ARGBEL :=> 1.0(Sentiment)
+*************************************************************************
+*****************************TWEET:36*****************************
+Go #WorldCup Who are you supporting? :=> 2.0(Sentiment)
+*************************************************************************
