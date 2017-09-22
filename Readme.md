@@ -15,7 +15,7 @@
 	> Import Server folder as eclipse General/Existing Projects into workspace
 	> Get all JAR files in JARs folder as external libraries
 	> Also get 'stanford-corenlp-3.5.2-models.jar' as file is too big to upload on repo
-	> Get various developer keys from ur twitter profile - '' and mention them in twitter4j.properties file in src
+	> Get various developer keys from ur twitter profile - 'https://apps.twitter.com/' and mention them in twitter4j.properties file in src
 	> Run client.java inorder to access platform through system
 	> Run server.java to interact with system using phone application
 	> Pretrender2 folder has phone application that can edited in Android Studio
